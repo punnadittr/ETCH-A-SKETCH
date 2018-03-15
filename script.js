@@ -42,7 +42,7 @@ function clearCanvas() {
   let num;
   for (num = 0; num < squares.length; num++) {
     squares[num].style.backgroundColor = "white";
-    isRandom = false
+    isRandom = false;
   }
 }
 // gets a random rgb value
