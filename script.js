@@ -7,8 +7,7 @@ let userInputSize = 50;
 let colors = "black";
 let isRandom;
 // random int function
-function getRanInt(min, max)
-{
+function getRanInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 // create and append divs to the canvas
