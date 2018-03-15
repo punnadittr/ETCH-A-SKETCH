@@ -1,0 +1,79 @@
+body {
+  background-color: orange;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: 150px;
+  grid-template-areas:
+    ". . . . b b b b . . . ."
+    ". . . . a a a a . . . ."
+    ". . . . a a a a . . . ."
+    ". . . . a a a a . . . ."
+    ". . . . a a a a . . . ."
+    ". . . . . . . . . . . .";
+}
+.menu {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  grid-template-areas:
+  ". e e e ."
+  ". . d . ."
+  ". a b c .";
+  grid-area: b;
+}
+.welcomeText {
+  grid-area: e;
+  align-self:center;
+  justify-self: center;
+  font-size: 2.5rem;
+}
+h1 {
+  font-family: "Monospace";
+}
+.canvas {
+  display: grid;
+  grid-area: a;
+  align-self: center;
+  justify-self: center;
+  width: 600px;
+  height: 600px;
+}
+.buttons {
+  height: 50px;
+  letter-spacing: 2px;
+  background-color: white;
+  border: none;
+  border-radius: 5%;
+  font-size: 1.1em;
+  width: auto;
+  align-self: flex-end;
+}
+.clear {
+  grid-area: a;
+}
+.newSize {
+  grid-area: b;
+}
+.randomColor {
+  font-weight: bold;
+  color: black;
+  background: linear-gradient(to right, rgba(191,0,255,1) 0%, rgba(0,42,250,1) 15%, rgba(51,0,255,1) 31%, rgba(64,255,0,1) 47%, rgba(255,255,0,1) 65%, rgba(255,140,0,1) 82%, rgba(255,0,0,1) 100%);
+  grid-area: c;
+}
+.fa-eraser {
+  margin-left: 3px;
+}
+.canvasAdjust {
+  align-self: center;
+  justify-self: center;
+  grid-area: e;
+}
+.buttons:hover {
+  transform: scale(1.1);
+}
+.buttons:active {
+  transform: translateY(3px);
+}
