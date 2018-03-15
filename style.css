@@ -15,6 +15,7 @@ body {
     ". . . . . . . . . . . .";
 }
 .menu {
+  grid-area: b;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 10px;
@@ -22,7 +23,6 @@ body {
   ". e e e ."
   ". . d . ."
   ". a b c .";
-  grid-area: b;
 }
 .welcomeText {
   grid-area: e;
@@ -34,8 +34,8 @@ h1 {
   font-family: "Monospace";
 }
 .canvas {
-  display: grid;
   grid-area: a;
+  display: grid;
   align-self: center;
   justify-self: center;
   width: 600px;
@@ -43,12 +43,12 @@ h1 {
 }
 .buttons {
   height: 50px;
+  width: auto;
   letter-spacing: 2px;
   background-color: white;
   border: none;
   border-radius: 5%;
   font-size: 1.1em;
-  width: auto;
   align-self: flex-end;
 }
 .clear {
@@ -58,18 +58,20 @@ h1 {
   grid-area: b;
 }
 .randomColor {
+  grid-area: c;
   font-weight: bold;
   color: black;
-  background: linear-gradient(to right, rgba(191,0,255,1) 0%, rgba(0,42,250,1) 15%, rgba(51,0,255,1) 31%, rgba(64,255,0,1) 47%, rgba(255,255,0,1) 65%, rgba(255,140,0,1) 82%, rgba(255,0,0,1) 100%);
-  grid-area: c;
+  background: linear-gradient(to right, rgba(191,0,255,1) 0%,
+  rgba(0,42,250,1) 15%, rgba(51,0,255,1) 31%, rgba(64,255,0,1) 47%,
+  rgba(255,255,0,1) 65%, rgba(255,140,0,1) 82%, rgba(255,0,0,1) 100%);
 }
 .fa-eraser {
   margin-left: 3px;
 }
 .canvasAdjust {
+  grid-area: e;
   align-self: center;
   justify-self: center;
-  grid-area: e;
 }
 .buttons:hover {
   transform: scale(1.1);
